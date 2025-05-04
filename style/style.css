@@ -10,18 +10,22 @@
 
 .wrapper {
     background-color: #FEF3E2;
-    height: 100vh   ;
+    min-height: 100vh; /* ✅ ini solusi utamanya */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
+/* Pastikan .content bisa mengisi ruang di antara header dan footer */
 .content {
-    width: 95%;
+    flex: 1;
     margin: 5px auto;
     padding: 10px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
     gap: 50px;
-    width: 100vh;
+    width: 100%; /* ganti dari 100vh ke 100% */
 }
 
 .input {
@@ -58,3 +62,12 @@
     background-color: #F3C623;
     color: white;
 }
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+
+}
+
+
